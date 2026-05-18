@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politécnico Nafoem | Excelencia Educativa</title>
+    <meta name="description" content="Empoderando a la próxima generación de profesionales a través de formación práctica y un camino claro hacia la maestría laboral en el Politécnico Nafoem.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" data-link="home">
+                <img src="images/Logo_Nafoem.png" alt="Logo Politécnico Nafoem" class="nav-logo">
+                <span class="logo-text">POLITÉCNICO NAFOEM</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" data-link="home" class="nav-link active">Inicio</a></li>
+                    <li><a href="#about" data-link="about" class="nav-link">Nosotros</a></li>
+                    <li><a href="#programs" data-link="programs" class="nav-link">Programas</a></li>
+                    <li><a href="#admissions" data-link="admissions" class="nav-link">Admisiones</a></li>
+                    <li><a href="#news" data-link="news" class="nav-link">Noticias</a></li>
+                    <li><a href="#contact" data-link="contact" class="nav-link btn-outline">Contáctenos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="app-content">
+        <!-- Content injected by JS -->
+    </main>
+
+    <!-- Modal para Programas -->
+    <div id="program-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <h2 id="modal-title" class="mb-4 text-blue">Título del Programa</h2>
+                
+                <div class="modal-section">
+                    <h3><i class="fa-solid fa-user-tie text-accent"></i> Perfil Ocupacional</h3>
+                    <ul id="modal-profile" class="check-list mt-2">
+                        <!-- Perfil dinámico -->
+                    </ul>
+                </div>
+                
+                <div class="modal-section mt-4">
+                    <h3><i class="fa-solid fa-clipboard-check text-accent"></i> Requisitos de Ingreso</h3>
+                    <ul id="modal-requirements" class="check-list mt-2">
+                        <!-- Requisitos dinámicos -->
+                    </ul>
+                </div>
+                
+                <div class="modal-section mt-4">
+                    <h3 id="modal-modules-title"><i class="fa-solid fa-book text-accent"></i> Módulos del Programa</h3>
+                    <ul id="modal-modules" class="module-grid mt-2">
+                        <!-- Módulos dinámicos -->
+                    </ul>
+                </div>
+                
+                <div class="text-center mt-5">
+                    <a href="#admissions" class="btn btn-primary btn-modal-apply">¡Inscríbete Ahora!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Politécnico Nafoem</h3>
+                <p>Empoderando a la próxima generación de profesionales a través de formación práctica y un camino claro hacia la maestría laboral.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#about" data-link="about">Nosotros</a></li>
+                    <li><a href="#programs" data-link="programs">Nuestros Programas</a></li>
+                    <li><a href="#admissions" data-link="admissions">Admisiones</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contáctenos</h4>
+                <ul class="contact-info">
+                    <li><i class="fa-solid fa-location-dot"></i> Carrera 45 (El Palo), Nro. 49-51, Medellín</li>
+                    <li><i class="fa-solid fa-phone"></i> +57 604 444 6110</li>
+                    <li><i class="fa-solid fa-envelope"></i> admisiones@nafoem.edu.co</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Politécnico Nafoem. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template id="tpl-home">
+        <section class="hero" style="background-image: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('images/background.jpg');">
+            <div class="container hero-content">
+                <h1 class="hero-title animate-up">Arquitectos de Aspiraciones</h1>
+                <p class="hero-subtitle animate-up delay-1">Empoderando a la próxima generación de profesionales a través de formación práctica y un camino claro hacia la maestría laboral.</p>
+                <div class="hero-actions animate-up delay-2">
+                    <a href="#admissions" data-link="admissions" class="btn btn-primary">Aplica Ahora</a>
+                    <a href="#programs" data-link="programs" class="btn btn-secondary">Ver Programas</a>
+                    <a href="#contact" data-link="contact" class="btn btn-outline-light">Solicitar Información</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="features section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>¿Por qué elegir el Politécnico Nafoem?</h2>
+                    <p>Brindamos una experiencia educativa transformadora, diseñada para el mundo profesional moderno.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card feature-card animate-up">
+                        <div class="icon-wrapper"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Currículo Relevante</h3>
+                        <p>Nuestros programas están diseñados para responder a las necesidades actuales del mercado, asegurando que aprendas habilidades demandadas por las empresas.</p>
+                    </div>
+                    <div class="card feature-card animate-up delay-1">
+                        <div class="icon-wrapper"><i class="fa-solid fa-microscope"></i></div>
+                        <h3>Instalaciones de Vanguardia</h3>
+                        <p>Aprende en laboratorios modernos, talleres y aulas equipadas con la última tecnología y herramientas especializadas.</p>
+                    </div>
+                    <div class="card feature-card animate-up delay-2">
+                        <div class="icon-wrapper"><i class="fa-solid fa-user-graduate"></i></div>
+                        <h3>Apoyo Profesional</h3>
+                        <p>Benefíciate de nuestra red de aliados, oportunidades de prácticas empresariales y nuestro sólido enfoque en competencias laborales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section section text-center">
+            <div class="container">
+                <h2>¿Listo para Construir tu Futuro?</h2>
+                <p>Únete a una comunidad de profesionales en formación y da el primer paso hacia una carrera exitosa y gratificante.</p>
+                <a href="#admissions" data-link="admissions" class="btn btn-primary">Inicia tu Aplicación</a>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-about">
+        <section class="page-header">
+            <div class="container">
+                <h1>Nosotros</h1>
+                <p>Conoce nuestra misión, visión y compromiso con la excelencia educativa.</p>
+            </div>
+        </section>
+        <section class="section about-content">
+            <div class="container">
+                <div class="grid grid-2 align-center gap-lg">
+                    <div class="about-text">
+                        <h2>Nuestra Misión</h2>
+                        <p>El POLITÉCNICO NAFOEM, es una institución de formación para el trabajo y el desarrollo humano con una oferta educativa bajo la modalidad de programas técnicos laborales, idiomas, cursos, diplomados y seminarios. Buscamos brindar educación accesible y de alta calidad.</p>
+                        
+                        <h2>Nuestra Visión</h2>
+                        <p>Ser reconocidos como un politécnico con calidad educativa y formación integral, mediante procesos que vinculan al aprendiz con el sector empresarial, desarrollando programas de formación para promover las alternativas de empleo.</p>
+                        
+                        <h2>Nuestras Acreditaciones</h2>
+                        <ul class="check-list mt-3">
+                            <li><i class="fa-solid fa-check"></i> Formación para el Trabajo y Desarrollo Humano</li>
+                            <li><i class="fa-solid fa-check"></i> Vinculación con el Sector Empresarial</li>
+                            <li><i class="fa-solid fa-check"></i> Calidad Educativa y Formación Integral</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder bg-blue rounded shadow">
+                            <i class="fa-solid fa-building-columns fa-5x text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-programs">
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestros Programas</h1>
+                <p>Explora nuestra amplia oferta de programas técnicos laborales e idiomas diseñados para tu éxito profesional.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3">
+                    <!-- Programa 1 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-users fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar de Recurso Humano y Riesgo Laboral</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Desarrolla competencias en contratación, gestión de personal, nómina y sistemas de gestión de seguridad en el trabajo.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="recursos-humanos">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 2 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-plane-departure fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Organización y Comercialización Turística</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Domina el diseño de paquetes turísticos, técnicas de reserva, ventas de servicios y fidelización en el sector del turismo.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="turismo">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 3 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-calculator fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar Contable y Financiero</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Capacítate en el registro de transacciones, elaboración de informes financieros, control de recursos y procesos contables.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="contable">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 4 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-folder-open fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar Administrativo</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Aprende a gestionar documentación, organizar reuniones administrativas y controlar correspondencia de manera eficiente.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="administrativo">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 5 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-child-reaching fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar de Educación para la Primera Infancia</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Fórmate para cuidar y acompañar el desarrollo infantil, promoviendo la salud, lectura y escritura en la primera infancia.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="primera-infancia">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 6 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-store fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Agente de Ventas</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Adquiere habilidades en prospección de clientes, negociación de productos, servicio al cliente y estrategias de mercadeo.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="ventas">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 7 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-magnifying-glass-chart fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Investigador Judicial</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Aprende inspección del lugar de los hechos, grafología, documentología y estructuración de investigaciones criminalísticas.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="judicial">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 8 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-boxes-stacked fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar de Logística en Centros de Distribución</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Domina procesos de almacenamiento, despacho, recepción de mercancías, preparación de carga y programación de rutas.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="logistica">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 9 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-computer fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Auxiliar en Sistemas Informáticos</h3>
+                            <p class="program-meta">Técnico Laboral por Competencias</p>
+                            <p>Especialízate en arquitectura, mantenimiento de equipos de cómputo, corrección de fallas y proyectos de software.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="sistemas">Ver +</button>
+                        </div>
+                    </div>
+                    <!-- Programa 10 -->
+                    <div class="card program-card">
+                        <div class="program-img bg-blue-light"><i class="fa-solid fa-language fa-4x text-blue"></i></div>
+                        <div class="program-content">
+                            <h3>Inglés</h3>
+                            <p class="program-meta">Niveles Académicos M.C.E.R.</p>
+                            <p>Construye tus habilidades comunicativas en inglés (A1, A2, B1, B2) fortaleciendo tus capacidades orales, auditivas, escritas y lectoras.</p>
+                            <button class="btn btn-outline w-100 mt-auto btn-ver-mas" data-program="ingles">Ver +</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-admissions">
+        <section class="page-header">
+            <div class="container">
+                <h1>Admisiones</h1>
+                <p>Tu camino hacia el éxito comienza aquí. Sigue nuestro proceso de matrícula.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2 gap-lg">
+                    <div>
+                        <h2>Proceso de Inscripción</h2>
+                        <div class="step-list mt-4">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h3>Diligenciar el Formulario</h3>
+                                    <p>Completa el formulario de aplicación disponible en nuestras instalaciones o en línea.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h3>Entrega de Documentos</h3>
+                                    <p>Proporciona tus fotos (3x4 fondo blanco), fotocopias del documento de identidad y certificado de notas (noveno o último grado cursado) o acta de grado.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h3>Entrevista de Admisión</h3>
+                                    <p>Asiste a la entrevista programada con nuestro equipo de admisiones.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <div>
+                                    <h3>Matrícula y Registro</h3>
+                                    <p>Realiza el pago de tus derechos académicos y finaliza tu registro oficial para iniciar clases.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="admissions-sidebar">
+                        <div class="card bg-gray-light mb-4 shadow-none border">
+                            <h3>Información Financiera</h3>
+                            <ul class="fee-list mt-3">
+                                <li><span>Inscripción:</span> <strong>Consultar</strong></li>
+                                <li><span>Mensualidad:</span> <strong>Consultar</strong></li>
+                                <li><span>Materiales:</span> <strong>Según el programa</strong></li>
+                            </ul>
+                            <p class="mt-3 text-sm text-light">*Contacta a nuestro equipo para conocer planes de financiación o becas disponibles.</p>
+                        </div>
+                        <div class="card border">
+                            <h3>Descargas</h3>
+                            <ul class="download-list mt-3">
+                                <li><a href="#"><i class="fa-solid fa-file-pdf text-red"></i> Formulario de Inscripción (PDF)</a></li>
+                                <li><a href="#"><i class="fa-solid fa-file-pdf text-red"></i> Requisitos de Grado (PDF)</a></li>
+                                <li><a href="#"><i class="fa-solid fa-file-pdf text-red"></i> Calendario Académico (PDF)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+
+    <template id="tpl-news">
+        <section class="page-header">
+            <div class="container">
+                <h1>Noticias y Eventos</h1>
+                <p>Mantente al día con las últimas novedades del Politécnico Nafoem.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-3">
+                    <div class="card news-card">
+                        <div class="news-img bg-blue-light"><i class="fa-solid fa-newspaper fa-4x text-blue"></i></div>
+                        <div class="news-content">
+                            <span class="news-date">Oct 15, 2026</span>
+                            <h3 class="mt-2">Feria de Innovación y Emprendimiento</h3>
+                            <p>Acompáñanos el próximo mes mientras nuestros estudiantes presentan sus últimos proyectos a líderes de la industria local.</p>
+                            <a href="#" class="read-more">Leer Más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-img bg-blue-light"><i class="fa-solid fa-handshake fa-4x text-blue"></i></div>
+                        <div class="news-content">
+                            <span class="news-date">Sep 28, 2026</span>
+                            <h3 class="mt-2">Nuevas Alianzas Empresariales</h3>
+                            <p>Nos emociona anunciar nuestras nuevas alianzas que proporcionarán oportunidades exclusivas de prácticas para nuestros estudiantes.</p>
+                            <a href="#" class="read-more">Leer Más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="card news-card">
+                        <div class="news-img bg-blue-light"><i class="fa-solid fa-calendar-check fa-4x text-blue"></i></div>
+                        <div class="news-content">
+                            <span class="news-date">Sep 10, 2026</span>
+                            <h3 class="mt-2">Jornada de Puertas Abiertas</h3>
+                            <p>Invitamos a futuros estudiantes a conocer nuestras instalaciones, conversar con docentes y explorar todos nuestros programas técnicos.</p>
+                            <a href="#" class="read-more">Leer Más <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <template id="tpl-contact">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contáctenos</h1>
+                <p>Estamos aquí para responder tus preguntas. Comunícate con nosotros hoy mismo.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-2 gap-lg">
+                    <div class="card contact-form-card">
+                        <h2>Envíanos un Mensaje</h2>
+                        <form id="contactForm" class="contact-form mt-4">
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" required placeholder="Ej: Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electrónico</label>
+                                <input type="email" id="email" required placeholder="juan@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <select id="subject" required>
+                                    <option value="">Selecciona un asunto...</option>
+                                    <option value="admisiones">Información de Admisiones</option>
+                                    <option value="programas">Información sobre Programas</option>
+                                    <option value="general">Pregunta General</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" rows="5" required placeholder="¿Cómo podemos ayudarte?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <div>
+                        <h2>Información de Contacto</h2>
+                        <div class="contact-details mt-4">
+                            <div class="contact-item">
+                                <div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h4>Visítanos</h4>
+                                    <p>Carrera 45 (El Palo), Nro. 49-51<br>Medellín</p>
+                                </div>
+                            </div>
+                            <div class="contact-item mt-4">
+                                <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h4>Llámanos</h4>
+                                    <p>+57 604 444 6110<br>Lun-Vie, 8am-5pm</p>
+                                </div>
+                            </div>
+                            <div class="contact-item mt-4">
+                                <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h4>Escríbenos</h4>
+                                    <p>admisiones@nafoem.edu.co<br>info@nafoem.edu.co</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-placeholder mt-5 rounded shadow" style="height: 250px; overflow: hidden; border: 1px solid var(--clr-border);">
+                            <iframe src="https://maps.google.com/maps?q=Carrera%2045%20(El%20Palo),%20Nro.%2049-51,%20Medell%C3%ADn&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
